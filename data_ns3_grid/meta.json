@@ -1,0 +1,32 @@
+{
+  "scale": "ns3",
+  "n_scenarios": 525,
+  "seq_keys": [
+    "fwd_ratio",
+    "drop_ratio",
+    "data_rx_forward",
+    "data_forwarded",
+    "data_dropped",
+    "rreq_forwarded",
+    "rrep_sent",
+    "data_originated",
+    "avg_neighbors",
+    "ctrl_to_data"
+  ],
+  "n_features": 10,
+  "telemetry_rev": 3,
+  "ratio_definition": "outcome-based: x/(fwd+drop)",
+  "validation_cols": [
+    "in_flight",
+    "drop_selective",
+    "drop_overflow",
+    "drop_no_route",
+    "drop_route_error",
+    "drop_ttl_expired",
+    "drop_arp_fail",
+    "drop_ip_other",
+    "rerr_sent",
+    "rreq_originated"
+  ],
+  "max_windows": 15
+}

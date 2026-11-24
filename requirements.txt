@@ -1,0 +1,9 @@
+# Versions used for all reported results (Python 3.13).
+numpy==2.4.3
+pandas==3.0.3
+scikit-learn==1.9.0
+matplotlib==3.10.8
+
+# Only for the Phi-3 fine-tune (models/finetune_slm_mps.py), which ran
+# separately on Python 3.12 with torch 2.9.1:
+#   pip install torch==2.9.1 transformers peft accelerate

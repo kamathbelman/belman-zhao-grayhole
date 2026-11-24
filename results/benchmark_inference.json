@@ -1,0 +1,106 @@
+{
+  "config": {
+    "threads": 1,
+    "repeats": 30,
+    "warmup": 5,
+    "timer": "time.perf_counter",
+    "batch1_samples": 100
+  },
+  "hardware": {
+    "platform": "macOS-26.5.2-x86_64-i386-64bit-Mach-O",
+    "processor": "i386",
+    "machine": "x86_64",
+    "cpu_count_logical": 16,
+    "python": "3.13.2",
+    "numpy": "2.4.3",
+    "sklearn": "1.9.0"
+  },
+  "models": {
+    "SVM-RBF": {
+      "batch1_latency": {
+        "median_ms": 0.13858349120710045,
+        "p25_ms": 0.1381250040140003,
+        "p75_ms": 0.13961450895294547,
+        "mean_ms": 0.1488703678155111,
+        "std_ms": 0.0859633598635896,
+        "n_measurements": 90
+      },
+      "batched": {
+        "median_ms": 87.20377100689802,
+        "p25_ms": 87.15311474952614,
+        "p75_ms": 87.29817701532738,
+        "mean_ms": 87.22113890107721,
+        "std_ms": 0.09856742562408019,
+        "n_measurements": 30,
+        "amortized_ms_per_node": 0.06707982385146002,
+        "nodes_per_second": 14907.612193710831,
+        "batch_size": 1300
+      }
+    },
+    "RandomForest": {
+      "batch1_latency": {
+        "median_ms": 5.785021014162339,
+        "p25_ms": 5.774218763690442,
+        "p75_ms": 5.804374995932449,
+        "mean_ms": 5.801428244901924,
+        "std_ms": 0.06073373946523323,
+        "n_measurements": 90
+      },
+      "batched": {
+        "median_ms": 18.836000497685745,
+        "p25_ms": 18.774906486214604,
+        "p75_ms": 18.882562246290036,
+        "mean_ms": 18.83130426770852,
+        "std_ms": 0.0692700814705595,
+        "n_measurements": 30,
+        "amortized_ms_per_node": 0.014489231152065959,
+        "nodes_per_second": 69016.7745620798,
+        "batch_size": 1300
+      }
+    },
+    "SLM-attn": {
+      "batch1_latency": {
+        "median_ms": 0.050583010306581855,
+        "p25_ms": 0.05041625990998,
+        "p75_ms": 0.050749978981912136,
+        "mean_ms": 0.05070374399009678,
+        "std_ms": 0.0006093325510778396,
+        "n_measurements": 90
+      },
+      "batched": {
+        "median_ms": 14.85683349892497,
+        "p25_ms": 14.843812510662246,
+        "p75_ms": 14.870895480271429,
+        "mean_ms": 14.872748631751165,
+        "std_ms": 0.059088711044327134,
+        "n_measurements": 30,
+        "amortized_ms_per_node": 0.011428333460711516,
+        "nodes_per_second": 87501.82197936505,
+        "batch_size": 1300
+      }
+    },
+    "HRM": {
+      "batch1_latency": {
+        "median_ms": 0.8907499868655577,
+        "p25_ms": 0.8863750190357678,
+        "p75_ms": 0.8956875099102035,
+        "mean_ms": 0.8922319354799887,
+        "std_ms": 0.007601542699083821,
+        "n_measurements": 30
+      },
+      "batch1_unit": "one scenario (tier-2 needs the neighborhood)",
+      "batch1_ms_per_node_median": 0.017814999737311155,
+      "batched": {
+        "median_ms": 35.90489548514597,
+        "p25_ms": 35.82312500657281,
+        "p75_ms": 35.973468991869595,
+        "mean_ms": 35.89983049896546,
+        "std_ms": 0.11826839532347196,
+        "n_measurements": 30,
+        "amortized_ms_per_node": 0.008311318399339344,
+        "nodes_per_second": 120317.85475568938,
+        "batch_size": 4320
+      }
+    }
+  }
+}
